@@ -1,0 +1,34 @@
+@use 'variables';
+
+:host {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-rows: 125px auto 75px;
+  width: 100%;
+  height: 100%;
+  header {
+    border-bottom: variables.$border-layout;
+    .container {
+      display: flex;
+      align-items: center;
+      .logo {
+        width: 100px;
+        img {
+          width: 100%;
+        }
+      }
+      .nav-bar {
+        .nav-links {
+          margin-left: 20px;
+          display: flex;
+          .nav-link {
+            margin-right: 40px;
+          }
+        }
+      }
+    }
+  }
+}
