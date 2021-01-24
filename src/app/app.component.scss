@@ -31,4 +31,15 @@
       }
     }
   }
+  footer {
+    border-top: variables.$border-layout;
+    .container {
+      display: flex;
+      align-items: center;
+      .copyright {
+        margin-left: 50px;
+        color: #aaa;
+      }
+    }
+  }
 }
