@@ -24,8 +24,12 @@
         .nav-links {
           margin-left: 20px;
           display: flex;
+          cursor: pointer;
           .nav-link {
             margin-right: 40px;
+            &.active {
+              text-decoration: underline;
+            }
           }
         }
       }

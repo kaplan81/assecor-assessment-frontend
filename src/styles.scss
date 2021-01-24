@@ -8,6 +8,12 @@ body {
   ul {
     list-style-type: none;
   }
+  input:focus,
+  textarea:focus,
+  select:focus,
+  li:focus {
+    outline: none;
+  }
   .container {
     width: 75%;
     height: 100%;
