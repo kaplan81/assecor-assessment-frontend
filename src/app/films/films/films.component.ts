@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Film } from 'angular2-swapi';
+import { Observable } from 'rxjs';
+import { StarWarsService } from '../../star-wars.service';
 
 @Component({
   selector: 'app-films',
   templateUrl: './films.component.html',
-  styleUrls: ['./films.component.scss']
+  styleUrls: ['./films.component.scss'],
 })
-export class FilmsComponent implements OnInit {
+export class FilmsComponent {
+  films$: Observable<Film[]> = this.starWarsService.getFilms();
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  constructor(private starWarsService: StarWarsService) {}
 }
