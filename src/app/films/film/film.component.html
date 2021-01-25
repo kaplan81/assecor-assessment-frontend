@@ -1,3 +1,14 @@
-<p>film works!</p>
-
-<pre>{{ film$ | async | json }}</pre>
+<ng-container *ngIf="film$ | async as film">
+  <div class="list-heading">
+    <div class="pretitle">Film Details</div>
+    <hr class="separator" />
+    <h1>{{ film.title }}</h1>
+  </div>
+  <p class="detail">{{ film.opening_crawl }}</p>
+  <br />
+  <p class="detail">Regisseur: {{ film.director }}</p>
+  <br />
+  <p class="detail">Produzenten: {{ film.producer }}</p>
+  <br />
+  <p class="detail">Erscheinungsdatum: {{ film.release_date }}</p>
+</ng-container>
