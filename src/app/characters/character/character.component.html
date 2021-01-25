@@ -1,1 +1,20 @@
-<pre>{{ character$ | async | json }}</pre>
+<ng-container *ngIf="character$ | async as character">
+  <div class="list-heading">
+    <div class="pretitle">Charakter Details</div>
+    <hr class="separator" />
+    <h1>{{ character.name }}</h1>
+  </div>
+  <p class="detail narrow">Höhe: {{ character.height }}</p>
+  <br />
+  <p class="detail narrow">Masse: {{ character.mass }}</p>
+  <br />
+  <p class="detail narrow">Haarfarbe: {{ character.hair_color }}</p>
+  <br />
+  <p class="detail narrow">Hautfarbe: {{ character.skin_color }}</p>
+  <br />
+  <p class="detail narrow">Augenfarbe: {{ character.eye_color }}</p>
+  <br />
+  <p class="detail narrow">Geburgstag: {{ character.birth_year }}</p>
+  <br />
+  <p class="detail narrow">Geschlecht: {{ character.gender }}</p>
+</ng-container>

@@ -52,7 +52,12 @@ body {
     margin: 20px auto;
   }
   .detail {
-    width: 90%;
     margin: 0 auto;
+    &.wide {
+      width: 90%;
+    }
+    &.narrow {
+      width: 50%;
+    }
   }
 }
