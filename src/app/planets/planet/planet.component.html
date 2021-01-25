@@ -1,1 +1,22 @@
-<pre>{{ planet$ | async | json }}</pre>
+<ng-container *ngIf="planet$ | async as planet">
+  <div class="list-heading">
+    <div class="pretitle">Planet Details</div>
+    <hr class="separator" />
+    <h1>{{ planet.name }}</h1>
+  </div>
+  <p class="detail narrow">Rotationzeitraum: {{ planet.rotation_period }}</p>
+  <br />
+  <p class="detail narrow">Orbitalzeitraum: {{ planet.orbital_period }}</p>
+  <br />
+  <p class="detail narrow">Durchmesser: {{ planet.diameter }}</p>
+  <br />
+  <p class="detail narrow">Klima: {{ planet.climate }}</p>
+  <br />
+  <p class="detail narrow">Schwerkraft : {{ planet.gravity }}</p>
+  <br />
+  <p class="detail narrow">Gelände: {{ planet.terrain }}</p>
+  <br />
+  <p class="detail narrow">Wasseroberfläche: {{ planet.surface_water }}</p>
+  <br />
+  <p class="detail narrow">Bevölkerung: {{ planet.population }}</p>
+</ng-container>
