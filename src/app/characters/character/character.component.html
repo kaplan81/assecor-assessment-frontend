@@ -1,4 +1,4 @@
-<ng-container *ngIf="character$ | async as character">
+<ng-container *ngIf="character$ | async as character; else spinner">
   <div class="list-heading">
     <div class="pretitle">Charakter Details</div>
     <hr class="separator" />
@@ -18,3 +18,7 @@
   <br />
   <p class="detail narrow">Geschlecht: {{ character.gender }}</p>
 </ng-container>
+
+<ng-template #spinner>
+  <mat-spinner></mat-spinner>
+</ng-template>

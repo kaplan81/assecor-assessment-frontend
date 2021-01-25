@@ -60,4 +60,16 @@ body {
       width: 50%;
     }
   }
+  .mat-spinner {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    circle {
+      stroke: black;
+    }
+    z-index: 999;
+  }
 }
