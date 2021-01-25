@@ -3,7 +3,7 @@
 </div>
 
 <div class="responsive-grid">
-  <mat-card *ngFor="let character of characters$ | async">
+  <mat-card *ngFor="let character of characters$ | async" (click)="goToCharacter(character.url)">
     <img mat-card-image src="assets/characters.jpg" />
     <mat-card-header>
       <mat-card-title>{{ character.name }}</mat-card-title>

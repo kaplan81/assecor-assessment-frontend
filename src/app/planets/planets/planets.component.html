@@ -3,7 +3,7 @@
 </div>
 
 <div class="responsive-grid">
-  <mat-card *ngFor="let planet of planets$ | async">
+  <mat-card *ngFor="let planet of planets$ | async" (click)="goToPlanet(planet.url)">
     <img mat-card-image src="assets/planets.jpg" />
     <mat-card-header>
       <mat-card-title>{{ planet.name }}</mat-card-title>
