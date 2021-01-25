@@ -2,6 +2,18 @@
   <h1>Planeten</h1>
 </div>
 
-<pre>
-  {{ planets$ | async | json }}
-</pre>
+<div class="responsive-grid">
+  <mat-card *ngFor="let planet of planets$ | async">
+    <img mat-card-image src="assets/planets.jpg" />
+    <mat-card-header>
+      <mat-card-title>{{ planet.name }}</mat-card-title>
+    </mat-card-header>
+    <br />
+    <mat-card-content>
+      <p>Name: {{ planet.name }}</p>
+      <p>Durchmesser: {{ planet.diameter }}</p>
+      <p>Bevölkerung: {{ planet.population }}</p>
+      <br />
+    </mat-card-content>
+  </mat-card>
+</div>

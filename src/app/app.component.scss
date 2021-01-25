@@ -11,7 +11,7 @@
   height: 100%;
   header {
     border-bottom: variables.$border-layout;
-    .container {
+    .block-container {
       display: flex;
       align-items: center;
       .logo {
@@ -37,7 +37,7 @@
   }
   footer {
     border-top: variables.$border-layout;
-    .container {
+    .block-container {
       display: flex;
       align-items: center;
       .copyright {
@@ -46,4 +46,11 @@
       }
     }
   }
+}
+
+/* To make it different from Bootstrap's container class */
+.block-container {
+  width: 75%;
+  height: 100%;
+  margin: 0 auto;
 }

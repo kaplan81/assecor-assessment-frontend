@@ -2,6 +2,18 @@
   <h1>Charaktere</h1>
 </div>
 
-<pre>
-  {{ characters$ | async | json }}
-</pre>
+<div class="responsive-grid">
+  <mat-card *ngFor="let character of characters$ | async">
+    <img mat-card-image src="assets/characters.jpg" />
+    <mat-card-header>
+      <mat-card-title>{{ character.name }}</mat-card-title>
+    </mat-card-header>
+    <br />
+    <mat-card-content>
+      <p>Name: {{ character.name }}</p>
+      <p>Geschlecht: {{ character.gender }}</p>
+      <p>Höhe: {{ character.height }}</p>
+      <br />
+    </mat-card-content>
+  </mat-card>
+</div>

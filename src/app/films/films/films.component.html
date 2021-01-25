@@ -2,6 +2,18 @@
   <h1>Filme</h1>
 </div>
 
-<pre>
-  {{ films$ | async | json }}
-</pre>
+<div class="responsive-grid">
+  <mat-card *ngFor="let film of films$ | async">
+    <img mat-card-image src="assets/films.jpg" />
+    <mat-card-header>
+      <mat-card-title>{{ film.title }}</mat-card-title>
+    </mat-card-header>
+    <br />
+    <mat-card-content>
+      <p>Director: {{ film.director }}</p>
+      <p>Produzenten: {{ film.producer }}</p>
+      <p>Erscheinungsdatum: {{ film.release_date }}</p>
+      <br />
+    </mat-card-content>
+  </mat-card>
+</div>
